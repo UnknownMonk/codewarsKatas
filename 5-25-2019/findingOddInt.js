@@ -17,6 +17,8 @@ function findOdd(array) {
     }
   }
 }
+console.log(132323);
+
 
 findOdd(ary);
 

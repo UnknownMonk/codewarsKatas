@@ -8,9 +8,9 @@ function order(words) {
     const word = splitWords[i];
     let digit = +word.match(/\d/);
 
-    sortedWords[digit - 1] = word;
+    console.log((sortedWords[digit - 1] = word));
   }
-  return sortedWords.join(' ');
+  return console.log(sortedWords.join(' '));
 }
 
 order('4of Fo1r pe6ople g3ood th5e the2');
