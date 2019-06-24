@@ -14,15 +14,37 @@ class Animal {
 class Shark extends Animal {
   constructor(name, age, status) {
     super(name, age, status);
+    this.legs = 0
+    this.species = shark
   }
+  
 }
 
 class Cat extends Animal {
-  // Do the same here as you did for Shark - define your constructor function and any other methods you need
+  constructor(name,age,status){
+    super(name,age,status)
+    this.legs = 4
+    this.species = cat
+  }
+  introduce() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.  Meow meow!`;
+  }
 }
 
 class Dog extends Animal {
-  // On your own now - you can do it :D
+  constructor(name, age, status, master){
+    super(name, age , status)
+    this.master = master
+    this.legs = 4
+    this.species = dog
+  }
+  introduce() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+
+  greetMaster(){
+    return `Hello ${this.master}`
+  }
 }
 
 describe('The Shark class', _ => {
