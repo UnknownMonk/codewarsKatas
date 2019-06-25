@@ -2,19 +2,21 @@ class Guesser {
   constructor(number, lives) {
     this.number = number;
     this.lives = lives;
-    this.count = 0;
+    
   }
 
   guess(n) {
-    if (this.count === 0) {
-      this.count = n;
-
-      this.count = this.count - 1;
-      this.life = this.live - 1;
-      return false;
+    if(n === this.number){
+      return true
     }
-    this.count = this.count - 1;
-    this.life = this.life - 1;
+
+    
+    if(n != this.number && this.life != 0){
+      this.lives -1
+      return false
+    }else if(this.life == 0){
+      return Error('error already dead')
+    }
   }
 }
 
