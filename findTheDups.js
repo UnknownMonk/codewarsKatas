@@ -9,5 +9,9 @@ function duplicates(arr) {
   return output;
 }
 
-console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, '5']), 3, 'Nope, try again');
+console.log(
+  duplicates([1, 2, 4, 4, , 3, 3, 1, 5, 3, '5']),
+  3,
+  'Nope, try again'
+);
 console.log(duplicates([0, 1, 2, 3, 4, 5]), 0, 'Nope, try again');
