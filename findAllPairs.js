@@ -1,32 +1,16 @@
 function duplicates(array) {
-  let charMap = {};
-  let count = 0;
-  let zeros = 0;
+  const newArray = array.sort((a, b) => a - b);
+  if (newArray.length <= 1) return 0;
 
-  for (let num of array) {
-    charMap[num] = charMap[num] || 0;
-    
-    charMap[num]++;
-  }
-  console.log(zeros);
-  
+  let dups = [];
 
-  for (let value in charMap) {
-    console.log(charMap[value]);
-    console.log(value);
-    console.log(charMap);
-    
-    if (charMap[value] === 2) {
-      count += 1;
-    } else if (charMap[value] === 4) {
-      count += 2;
-    } else if (charMap[value] > 6) {
-      count += 3;
+  for (let i = 0; i < newArray.length; i++) {
+    if (newArray[i] == newArray[i + 1]) {
+      dups.push(newArray[i]);
+      i++;
     }
   }
-  console.log(count);
-
-  return count;
+  return dups.length;
 }
 
 console.log(duplicates([1, 2, 5, 6, 5, 2]), 2);
