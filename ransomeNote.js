@@ -8,6 +8,7 @@ function ransomeNote(sentance, mag) {
 
     if (!magObj[word]) magObj[word] = 0;
     magObj[word]++;
+    console.log(magObj);
   }
   let noteIsPossible = true;
   sentance1.forEach(word => {
