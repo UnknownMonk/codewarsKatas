@@ -1,16 +1,28 @@
-var capitals = function(word) {
-  // Write your code here
+String.prototype.yell = function() {
+  return this.toUpperCase() + '!!!!'
+}
 
-  let charMap = word
-    .split('')
-    .map((letter, i) => ({
-      letter,
-      i
-    }))
-    .filter(({ letter }) => letter === letter.toUpperCase())
-    .map(({ i }) => i);
 
-  console.log(charMap);
-};
+let name = 'jonas'
 
-console.log(capitals('CodEWaRs'), [0, 3, 4, 6]);
+name.yell()
+console.log(name.yell());
+
+
+String.prototype.toArray = function(){
+  return [this]
+}
+
+let myName = 'Jonas'
+
+
+let some = 'alkdjfajdflkajfkj'
+
+ let more = some.split('').map((letters, i) => ({letters,i}))
+
+ console.log(more);
+ 
+
+
+
+
