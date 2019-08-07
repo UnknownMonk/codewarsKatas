@@ -1,28 +1,33 @@
 String.prototype.yell = function() {
-  return this.toUpperCase() + '!!!!'
-}
+  return this.toUpperCase() + '!!!!';
+};
 
+let name = 'jonas';
 
-let name = 'jonas'
-
-name.yell()
+name.yell();
 console.log(name.yell());
 
+String.prototype.toArray = function() {
+  return [this];
+};
 
-String.prototype.toArray = function(){
-  return [this]
+let myName = 'Jonas';
+
+let some = 'alkdjfajdflkajfkj';
+
+let more = some.split('').map((letters, i) => ({ letters, i }));
+
+console.log(more);
+
+let myString = 'string';
+
+let congo = myString.split('').reduce((rev, char) => char + rev, '');
+console.log(congo);
+
+let reversed = '';
+
+for (let char of myString) {
+  console.log(char);
+  reversed = char + reversed;
 }
-
-let myName = 'Jonas'
-
-
-let some = 'alkdjfajdflkajfkj'
-
- let more = some.split('').map((letters, i) => ({letters,i}))
-
- console.log(more);
- 
-
-
-
-
+console.log(reversed);
