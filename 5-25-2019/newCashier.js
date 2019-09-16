@@ -23,7 +23,7 @@ function getOrder(input) {
         orderString + ' ' + (menuItem + ' ').repeat(orderItems.length).trim()
       );
     }
-    return orderString;
+    return orderString.trim();
   }, '');
 }
 
