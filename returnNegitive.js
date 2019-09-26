@@ -9,3 +9,6 @@ function makeNegative(num) {
 }
 
 console.log(makeNegative(42), -42);
+console.log(makeNegative(42), -42);
+console.log(makeNegative(42), -42);
+console.log(makeNegative(42), -42);
