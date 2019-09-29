@@ -9,6 +9,12 @@ function countSheeps(arrayOfSheep) {
   return count;
 }
 
+let countSheeps = arrayOfSheep => {
+  arrayOfSheep.reduce((count, i) => {
+    return i == true ? (count += 1) : sum;
+  });
+};
+
 var array1 = [
   true,
   true,
