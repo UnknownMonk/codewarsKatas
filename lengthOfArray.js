@@ -1,20 +1,31 @@
-var lengthOfSequence = function(arr, n) {
-  var hits = arr.filter(i => i === n).length;
-  console.log(arr.lastIndexOf(n));
+// var lengthOfSequence = function(arr, n) {
+//   var hits = arr.filter(i => i === n).length;
+//   console.log(arr.lastIndexOf(n));
 
-  return hits === 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
-};
+//   return hits === 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
+// };
 
-var lengthOfSequence = function(arr, n) {
-  let count = 0;
+// var lengthOfSequence = function(arr, n) {
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     const seg = arr[i];
+//     if (seg === n) {
+//       count++;
+//     }
+//   }
+
+//   return count === 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
+// };
+
+let lengthOfSequence = function(arr, n) {
+  let segIndex = [];
   for (let i = 0; i < arr.length; i++) {
     const seg = arr[i];
     if (seg === n) {
-      count++;
+      segIndex.push(i);
     }
   }
-
-  return count === 2 ? arr.lastIndexOf(n) - arr.indexOf(n) + 1 : 0;
+  return segIndex.length === 2 ? segIndex[1] - segIndex[0] + 1 : 0;
 };
 
 console.log(
