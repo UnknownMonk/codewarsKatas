@@ -1,0 +1,23 @@
+{
+  "_id": "439bb3a524784de0e0e9fdc3398fcedc",
+  "_rev": "7-c9a9f9d26aaa228f3bed6cc601aff214",
+  "old_outbound_dir": "Re_Trans\\outbox\\InMotion_Global2020",
+  "outbound_dir": "InMotion_Global2020\\test_outbox",
+  "edi_address": {
+    "production": {
+      "ISA_QUAL": "ZZ",
+      "ISA_ID": "MGRETRANS",
+      "GS_ID": "MGRETRANS",
+      "VERSION": "004010"
+    },
+    "test": {
+      "ISA_QUAL": "08",
+      "ISA_ID": "MGRETRANS",
+      "GS_ID": "MGRETRANS",
+      "VERSION": "004010"
+    }
+  },
+  "type": "trading_partner",
+  "direction": "outbound",
+  "description": "Re-Trans"
+}
