@@ -1,23 +1,85 @@
 {
-  "_id": "439bb3a524784de0e0e9fdc3398fcedc",
-  "_rev": "7-c9a9f9d26aaa228f3bed6cc601aff214",
-  "old_outbound_dir": "Re_Trans\\outbox\\InMotion_Global2020",
-  "outbound_dir": "InMotion_Global2020\\test_outbox",
-  "edi_address": {
-    "production": {
-      "ISA_QUAL": "ZZ",
-      "ISA_ID": "MGRETRANS",
-      "GS_ID": "MGRETRANS",
-      "VERSION": "004010"
-    },
-    "test": {
-      "ISA_QUAL": "08",
-      "ISA_ID": "MGRETRANS",
-      "GS_ID": "MGRETRANS",
-      "VERSION": "004010"
-    }
-  },
-  "type": "trading_partner",
-  "direction": "outbound",
-  "description": "Re-Trans"
+   "_id": "014169df874b7a7a5dcabadf7788afdc",
+   "_rev": "1-0de01fc9af7794deee1b2adea3d18234",
+   "org_id": "b932b3d8076c419e9aed4ce71c0180bb",
+   "edi_address": {
+       "production": {
+           "ISA_QUAL": "02",
+           "ISA_ID": "IMUT",
+           "GS_ID": "IMUT"
+       },
+       "test": {
+           "ISA_QUAL": "02",
+           "ISA_ID": "IMUT",
+           "GS_ID": "IMUT"
+       }
+   },
+   "type": "trading_partner",
+   "direction": "inbound",
+   "description": "Integrity Transport"
 }
+
+
+{
+    "_id": "748d1a6a72b59b4b96182949a3c0231d",
+    "_rev": "2-766993d8535546ebc1d27815ae1242df",
+    "old_outbound_dir": "PACCAR\\outbox\\InMotion_Global2020",
+   "outbound_dir": "InMotion_Global2020\\test_outbox",
+    "edi_address": {
+        "production": {
+            "ISA_QUAL": "08",
+            "ISA_ID": "4KITES",
+            "GS_ID": "4KITES"
+        },
+        "test": {
+            "ISA_QUAL": "08",
+            "ISA_ID": "4KITES",
+            "GS_ID": "4KITES"
+        }
+    },
+    "type": "trading_partner",
+    "direction": "outbound",
+    "description": "PACCAR"
+ },
+
+ {
+    "_id": "21f2a9b0bf3a6eead80fe3d6d3c74a16",
+    "_rev": "6-fb9c4cfa0b732826522ac6ad9c6e82dc",
+    "outbound_dir": "4KITES",
+    "edi_address": {
+        "production": {
+            "ISA_QUAL": "08",
+            "ISA_ID": "4KITES",
+            "GS_ID": "4KITES"
+        },
+        "test": {
+            "ISA_QUAL": "08",
+            "ISA_ID": "4KITES",
+            "GS_ID": "4KITES"
+        }
+    },
+    "type": "trading_partner",
+    "direction": "outbound",
+    "description": " PACCAR (via FourKites)",
+    "server": {
+        "inbound": {
+            "host": "ftp.loads.fourkites.com",
+            "username": "IMUT",
+            "password": "HSFRJ1mHlbM",
+            "protocol": "ftp",
+            "root": "./get/",
+            "move_after": true,
+            "remove_after": true,
+            "cache_root": "4KITES"
+        },
+        "outbound": {
+            "host": "ftp.loads.fourkites.com",
+            "username": "IMUT",
+            "password": "HSFRJ1mHlbM",
+            "protocol": "ftp",
+            "root": "./put/"
+        }
+    },
+    "ftp_outbound": true
+ },
+ stuff
