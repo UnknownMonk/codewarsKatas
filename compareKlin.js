@@ -382,4 +382,6 @@ function diff(obj1, obj2) {
   return result;
 }
 
-console.log(diff(jsonKline, jsonATMS));
+console.log(diff(jsonATMS, jsonKline));
+
+// console.log(JSON.stringify(jsonATMS));
